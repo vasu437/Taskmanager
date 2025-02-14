@@ -1,0 +1,324 @@
+1. Simple Rectangle:
+
+*****
+*****
+*****
+(Input: rows = 3, cols = 5)
+
+2. Hollow Rectangle:
+
+*****
+*   *
+*   *
+*****
+(Input: rows = 4, cols = 5)
+
+3. Right Triangle (Increasing):
+
+*
+**
+***
+****
+*****
+(Input: rows = 5)
+
+4. Right Triangle (Decreasing):
+
+*****
+****
+***
+**
+*
+(Input: rows = 5)
+
+5. Pyramid:
+
+    *
+   ***
+  *****
+ *******
+*********
+(Input: rows = 5)
+
+6. Inverted Pyramid:
+
+*********
+ *******
+  *****
+   ***
+    *
+(Input: rows = 5)
+
+7. Diamond:
+
+    *
+   ***
+  *****
+ *******
+*********
+ *******
+  *****
+   ***
+    *
+(Input: rows = 5)
+
+8. Pascal's Triangle:
+
+      1
+     1 1
+    1 2 1
+   1 3 3 1
+  1 4 6 4 1
+(Input: rows = 5)  (This one is more challenging!)
+
+9. Floyd's Triangle:
+
+1
+2 3
+4 5 6
+7 8 9 10
+(Input: rows = 4)
+
+10. Alphabet Triangle:
+
+A
+B B
+C C C
+D D D D
+(Input: rows = 4)
+
+
+9/02/2025
+
+Here’s **one table** with sample data, followed by practical **SQL clause questions** you can practice.
+
+---
+
+### **Table: `flights`**
+
+| flight_id | flight_number | airline     | departure_city | arrival_city | departure_time       | arrival_time         | status   | delay_minutes |
+|-----------|---------------|-------------|----------------|--------------|----------------------|----------------------|----------|---------------|
+| 1         | AA101         | AmericanAir | New York       | Los Angeles  | 2024-02-01 08:00:00  | 2024-02-01 11:00:00  | On Time  | 0             |
+| 2         | DL202         | Delta       | Chicago        | Miami        | 2024-02-01 09:30:00  | 2024-02-01 13:00:00  | Delayed  | 45            |
+| 3         | UA303         | United      | San Francisco  | Seattle      | 2024-02-01 07:00:00  | 2024-02-01 09:00:00  | Delayed  | 120           |
+| 4         | SW404         | Southwest   | Dallas         | Denver       | 2024-02-01 10:00:00  | 2024-02-01 12:00:00  | On Time  | 0             |
+| 5         | AA505         | AmericanAir | Boston         | Washington   | 2024-02-01 06:45:00  | 2024-02-01 08:15:00  | Canceled | NULL          |
+
+---
+
+### **Practical SQL Clause Questions**
+
+---
+
+**1. SELECT Clause:**
+
+- Retrieve all columns from the `flights` table.
+- Display only the `flight_number`, `airline`, and `status`.
+- Select distinct `departure_city` values from the table.
+
+---
+
+**2. WHERE Clause:**
+
+- Find all flights where the `status` is 'Delayed'.
+- Get all flights departing from 'Chicago'.
+- Retrieve flights where `delay_minutes` is greater than 30.
+
+---
+
+**3. ORDER BY Clause:**
+
+- List all flights sorted by `departure_time` in ascending order.
+- Display flights ordered by `delay_minutes` in descending order.
+- Show flights ordered first by `status`, then by `departure_city`.
+
+---
+
+**4. GROUP BY Clause:**
+
+- Count the number of flights for each `airline`.
+- Group flights by `status` and display the count for each.
+- Find the total delay time (`delay_minutes`) for each `airline`.
+
+---
+
+**5. HAVING Clause:**
+
+- Show airlines with total delay time greater than **60** minutes.
+- Find cities with more than **1** flight departing.
+- Display statuses that occur more than **1** time.
+
+---
+
+**6. CASE Statement:**
+
+- Create a new column that labels flights as:
+  - 'On Time' if `delay_minutes` = 0,
+  - 'Minor Delay' if `delay_minutes` between 1 and 60,
+  - 'Major Delay' if `delay_minutes` > 60.
+
+- Categorize `status` as 'Active' for 'On Time' and 'Delayed' flights, and 'Inactive' for 'Canceled' flights.
+
+---
+
+**7. SUBQUERY:**
+
+- Find the flights with the maximum delay.
+- Retrieve airlines that have at least one flight with a delay longer than the average delay of all flights.
+
+---
+
+**8. UNION Clause:**
+
+- Assume you have another table `international_flights`. Combine `flight_number` and `airline` from both tables using `UNION`.
+
+---
+
+**9. WINDOW FUNCTION (OVER Clause):**
+
+- Calculate the running total of `delay_minutes` for each `airline`.
+- Rank flights by `delay_minutes` within each `airline`.
+
+---
+
+Let me know if you'd like **answers** or **more advanced questions**! 😊
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+PYTHON
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Here are some hands-on Python practice questions focused on **loops** (e.g., `for`, `while`, nested loops). These will help you strengthen your understanding of loop logic and iteration:
+
+---
+
+### **Beginner Level**
+1. **Sum of Numbers**  
+   Write a program that calculates the sum of all numbers from 1 to 100 using a loop.
+
+2. **Count Even/Odd Numbers**  
+   Ask the user for a number `n`, then print how many even and odd numbers exist between 1 and `n`.
+
+3. **Multiplication Table**  
+   Generate and print the multiplication table for a number entered by the user (e.g., input `5` → table from 5×1 to 5×10).
+
+4. **Reverse a Number**  
+   Take a number as input (e.g., `1234`) and print its reverse (`4321`) using a loop.  
+   *Hint:* Use modulus (`%`) and integer division (`//`).
+
+5. **Check Palindrome Number**  
+   Check if a number entered by the user is a palindrome (e.g., `121` is a palindrome). Use loops, not string conversion.
+
+---
+
+### **Intermediate Level**
+6. **Prime Number Check**  
+   Write a program to check if a number is prime using a loop.  
+   *Example:*  
+   Input: `7` → Output: `Prime`  
+   Input: `9` → Output: `Not Prime`
+
+7. **Fibonacci Sequence**  
+   Generate the first `n` terms of the Fibonacci sequence using a loop.  
+   *Example:*  
+   Input: `5` → Output: `0, 1, 1, 2, 3`
+
+8. **Print Number Patterns**  
+   Use nested loops to print the following patterns:  
+   - **Pattern 1** (right-angled triangle):  
+     ```
+     1
+     1 2
+     1 2 3
+     1 2 3 4
+     ```
+   - **Pattern 2** (inverted pyramid):  
+     ```
+     * * * * *
+     * * * *
+     * * *
+     * *
+     *
+     ```
+
+9. **Sum of Digits**  
+   Calculate the sum of the digits of a number using a loop.  
+   *Example:*  
+   Input: `123` → Output: `6` (1+2+3)
+
+10. **Factorial Calculation**  
+    Compute the factorial of a number using a loop.  
+    *Example:*  
+    Input: `5` → Output: `120` (5×4×3×2×1)
+
+---
+
+### **Advanced Level**
+11. **Collatz Sequence**  
+    For a given number `n`, generate the Collatz sequence until it reaches 1:  
+    - If `n` is even → `n = n // 2`  
+    - If `n` is odd → `n = 3*n + 1`  
+    *Example:*  
+    Input: `6` → Output: `6 → 3 → 10 → 5 → 16 → 8 → 4 → 2 → 1`
+
+12. **Armstrong Number Check**  
+    Check if a number is an Armstrong number (e.g., `153 = 1³ + 5³ + 3³`). Use loops to calculate the sum of cubes of its digits.
+
+13. **Perfect Number Check**  
+    Check if a number is a perfect number (sum of its divisors excluding itself equals the number).  
+    *Example:*  
+    `6` (1+2+3 = 6) → Perfect  
+    `28` (1+2+4+7+14 = 28) → Perfect
+
+14. **Remove Duplicates from a List**  
+    Given a list like `[1, 2, 2, 3, 4, 4, 5]`, create a new list with duplicates removed **using loops** (without using `set()` or list comprehensions).
+
+15. **Prime Numbers in Range**  
+    Print all prime numbers between `start` and `end` values provided by the user. Use nested loops.
+
+---
+
+### **Challenges with Nested Loops**
+16. **Print Pascal’s Triangle**  
+    Use nested loops to print the first `n` rows of Pascal’s Triangle.  
+    *Example (n=4):*  
+    ```
+    1  
+    1 1  
+    1 2 1  
+    1 3 3 1  
+    ```
+
+17. **Diamond Pattern**  
+    Print a diamond pattern of stars (`*`) for a user-given size.  
+    *Example (size=3):*  
+    ```
+      *  
+     ***  
+    *****  
+     ***  
+      *  
+    ```
+
+18. **Guess the Number Game**  
+    Build a game where the program generates a random number between 1 and 100, and the user guesses it. Use a loop to:  
+    - Track the number of attempts.  
+    - Provide hints ("Too high" or "Too low").
+
+19. **Matrix Multiplication**  
+    Multiply two matrices (2D lists) using nested loops.  
+    *Example:*  
+    Matrix A: `[[1, 2], [3, 4]]`  
+    Matrix B: `[[5, 6], [7, 8]]`  
+    Result: `[[19, 22], [43, 50]]`
+
+20. **Longest Consecutive Sequence**  
+    Given a list of integers, find the length of the longest consecutive sequence using loops.  
+    *Example:*  
+    Input: `[100, 4, 200, 1, 3, 2]` → Output: `4` (sequence: 1,2,3,4)
+
+---
+
+### **Solutions or Hints?**
+If you’d like solutions to any of these problems or need hints, let me know! Practice writing the logic first, then test your code step by step. 

@@ -1,0 +1,55 @@
+1.Sum of Numbers
+Write a program that calculates the sum of all numbers from 1 to 100 using a loop.
+
+2.Count Even/Odd Numbers
+Ask the user for a number n, then print how many even and odd numbers exist between 1 and n.
+
+3.Multiplication Table
+Generate and print the multiplication table for a number entered by the user (e.g., input 5 → table from 5×1 to 5×10).
+
+4.Reverse a Number
+Take a number as input (e.g., 1234) and print its reverse (4321) using a loop.
+Hint: Use modulus (%) and integer division (//).
+
+5.Check Palindrome Number
+Check if a number entered by the user is a palindrome (e.g., 121 is a palindrome). Use loops, not string conversion.
+
+
+6.Prime Number Check
+Write a program to check if a number is prime using a loop.
+Example:
+Input: 7 → Output: Prime
+Input: 9 → Output: Not Prime
+
+7.Fibonacci Sequence
+Generate the first n terms of the Fibonacci sequence using a loop.
+Example:
+Input: 5 → Output: 0, 1, 1, 2, 3
+
+8.Print Number Patterns
+Use nested loops to print the following patterns:
+
+2.Pattern 1 (right-angled triangle):
+
+Copy
+1
+1 2
+1 2 3
+1 2 3 4
+Pattern 2 (inverted pyramid):
+
+Copy
+* * * * *
+* * * *
+* * *
+* *
+*
+9.Sum of Digits
+Calculate the sum of the digits of a number using a loop.
+Example:
+Input: 123 → Output: 6 (1+2+3)
+
+10.Factorial Calculation
+Compute the factorial of a number using a loop.
+Example:
+Input: 5 → Output: 120 (5×4×3×2×1)
